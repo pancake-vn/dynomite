@@ -3046,7 +3046,7 @@ static rstatus_t redis_copy_bulk(struct msg *dst, struct msg *src, bool log) {
     }
     len += CRLF_LEN * 2;
     len += (p - mbuf->pos);
-  } 
+  }
   bytes = len;
 
   /* copy len bytes to dst */
@@ -3462,8 +3462,8 @@ static rstatus_t redis_fragment_argx(struct msg *r, struct server_pool *pool,
     if (key_step != 1) sub_msgs[idx]->ntokens++;
     r->frag_seq[i] = sub_msgs[idx];
 
-    loga("frag_seq[%d]: %x   ||  idx: %d sub_msgs[idx]: %x", i,
-        r->frag_seq[i], idx, sub_msgs[idx]);
+    // loga("frag_seq[%d]: %x   ||  idx: %d sub_msgs[idx]: %x", i,
+    //     r->frag_seq[i], idx, sub_msgs[idx]);
 
   }
 
